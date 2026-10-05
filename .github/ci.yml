@@ -42,3 +42,4 @@ jobs:
       - name: Ejecutar Pruebas de Carga (k6)
         run: |
           docker run --rm -i grafana/k6 run - < tests-performance/load-test.js
+          # Disparar pipeline limpio
