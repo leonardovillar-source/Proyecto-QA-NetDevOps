@@ -1,0 +1,6 @@
+version: '3.8'
+services:
+  portal_cautivo:
+    build: ./sut
+    ports:
+      - "8080:80"
