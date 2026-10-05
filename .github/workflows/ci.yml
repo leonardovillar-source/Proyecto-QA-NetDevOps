@@ -33,7 +33,8 @@ jobs:
         working-directory: ./tests-e2e
         run: |
           npm install
-          npx playwright install --with-deps chromium
+          npx playwright install-deps
+          npx playwright install chromium
 
       - name: Ejecutar Pruebas E2E (Playwright)
         working-directory: ./tests-e2e
@@ -41,4 +42,4 @@ jobs:
 
       - name: Ejecutar Pruebas de Carga (k6)
         run: |
-         docker run --rm -i grafana/k6 run - < tests-performance/load-test.js
+          docker run --rm -i grafana/k6 run - < tests-performance/load-test.js
