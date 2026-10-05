@@ -32,8 +32,8 @@ jobs:
       - name: Instalar dependencias de pruebas E2E
         working-directory: ./tests-e2e
         run: |
-          npm install
-          npx playwright install --with-deps chromium
+           npm install
+           npx playwright install --with-deps chromium
 
       - name: Ejecutar Pruebas E2E (Playwright)
         working-directory: ./tests-e2e
