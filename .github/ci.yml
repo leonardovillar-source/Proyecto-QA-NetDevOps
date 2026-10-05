@@ -14,13 +14,16 @@ jobs:
       - name: Clonar el repositorio
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js
+      - name: Configurar Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: 20.x
           check-latest: true
 
       - name: Verificar versión de Node.js
+        run: node -v
+
+      - name: Verificar versión de Node
         run: node -v
 
       - name: Levantar la aplicación con Docker Compose
