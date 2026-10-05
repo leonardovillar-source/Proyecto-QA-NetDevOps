@@ -23,18 +23,12 @@ jobs:
       - name: Verificar versión de Node.js
         run: node -v
 
-      - name: Verificar versión de Node
-        run: node -v
-
       - name: Levantar la aplicación con Docker Compose
         run: docker compose up -d --build
 
       - name: Instalar dependencias de pruebas E2E
         working-directory: ./tests-e2e
-        run: |
-          npm install
-          npx playwright install-deps
-          npx playwright install chromium
+        run: npm ci
 
       - name: Ejecutar Pruebas E2E (Playwright)
         working-directory: ./tests-e2e
